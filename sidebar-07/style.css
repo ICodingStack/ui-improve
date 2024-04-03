@@ -320,3 +320,65 @@ body.collapsed .expand-btn svg {
     width: 100%;
   }
 }
+
+/* Add 3D rotation to sidebar links on hover */
+.sidebar-links li a:hover {
+  transform: perspective(800px) rotateY(20deg);
+  background-color: var(--sidebar-primary-hover);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add expanding effect to the profile section */
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-direction: row;
+  color: var(--text-link);
+  overflow-x: hidden;
+  min-height: 2.5rem;
+  margin-top: auto;
+  transition: transform 0.3s ease;
+}
+
+.sidebar__profile:hover {
+  transform: scale(1.05);
+}
+
+
+/* Add depth to the sidebar */
+.sidebar {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Add a 3D effect to the logo on hover */
+.logo__wrapper:hover {
+  transform: perspective(800px) rotateY(20deg);
+  transition: transform 0.3s ease;
+}
+
+/* Add a 3D flip effect to the expand button */
+.expand-btn {
+  transition: transform 0.3s ease;
+}
+
+.expand-btn:hover {
+  transform: perspective(800px) rotateY(180deg);
+}
+
+/* Enhance the 3D effect on the sidebar links */
+.sidebar-links li a {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebar-links li a:hover {
+  transform: perspective(800px) rotateY(20deg) translateZ(20px);
+}
+
+/* Add a 3D effect to the logout button */
+.logout:hover {
+  transform: perspective(800px) rotateX(20deg);
+  transition: transform 0.3s ease;
+}
